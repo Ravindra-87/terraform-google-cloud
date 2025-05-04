@@ -11,7 +11,6 @@ resource "google_compute_instance" "jenkins" {
   zone         = var.zone
   allow_stopping_for_update = true  # Allows stopping for updates like machine_type changes
 
-
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-11"
@@ -37,7 +36,7 @@ resource "google_compute_firewall" "jenkins-firewall" {
 
   allow {
     protocol = "tcp"
-    ports    = ["8080"]
+    ports    = ["80"]
   }
 
   source_ranges = ["0.0.0.0/0"]

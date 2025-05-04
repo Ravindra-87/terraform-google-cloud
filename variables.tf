@@ -16,7 +16,7 @@ variable "instance_name" {
   default = "jenkins-machine"
 }
 variable "machine_type" {
-  default = "n2-standard-4"
+  default = "n2-standard-3"
 }
 variable "service_account_email" {
   description = "Email of the service account to attach to the VM"
